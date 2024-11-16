@@ -4,7 +4,6 @@ const box = document.querySelectorAll(".box");
 const btnReset = document.getElementById("clear");
 const grids = document.getElementById("grid");
 
-// User declare variable
 const clearConfirm = "Are you sure you want to clear this?";
 let isMouseDown = false;
 let isFilled = false;
@@ -17,8 +16,6 @@ function switchMark(e) {
   }
 }
 
-// User mousedown and drag
-// mousemove, mousedown, mouseup are not trigger based on their predefined order of execution, but rather by specific action of user
 box.forEach((element) => {
   element.addEventListener("mousedown", function () {
     isMouseDown = true;
@@ -39,7 +36,6 @@ box.forEach((element) => {
   });
 });
 
-// Clear btn
 btnReset.addEventListener("click", function () {
   if (confirm(clearConfirm)) {
     box.forEach((element) => {
